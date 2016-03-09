@@ -1,0 +1,59 @@
+Muhammet Tayyip ÇANKAYA 131044054
+
+
+HW-03 RAPOR
+
+
+********************************************************************************
+
+ 	Odevde SpecList sinifini JAVA-LinkedList sinifindan extend ederek kullandim.
+
+Ayrica karsilastirma yapmak icinde Comparable interface'ini implements ederek
+ compareTo 
+metodunu karsilastirmada kullandim.
+
+
+********************************************************************************
+    
+	SpecList sinifi icerisinde:
+
+addAllAtHead(Collection<? extends E>c) metodu==>speclistin basina ekleme,
+
+getIntersectList (Collection<? extends E>c) metodu==>ortak elemenlari tekrarsiz yazan metot,
+
+sortList(int deger)meodu==>Cocktail Sort algoritmasi ile siralama yapan metot ve 
+
+toString()==>verileri ekrana yazan Object sinifindan override edilen metodlar bulunmaktadir.
+
+
+********************************************************************************
+    
+	JUnitTestinde SpecList<String> nesnesi olusturup onun uzerinde test yapiyorum.
+
+Main kisminda ise SpecList<Integer> nesnesi olusturup onun uzerinde test yaptim.Ayni 
+sekilde 
+SpecList<Character> nesnesinde de calistigini gozlemledim.131044054-Model 
+isimli dosyada 
+UMLDiagram bulunmaktadir.
+
+
+********************************************************************************
+    
+	Algoritma Karmasikligi
+
+
+
+
+n input size icin:
+
+*addAllAtHead metodu tek for icinde n defa yapilir.Iceride iterator yardimiyla add metodu constant zamanda yapilir.
+Sonuc olarak bu metot O(n) zaman alir.
+
+*getIntersectList metodunda uste bir for O(n) zaman alir.Iceride indexOf metoduda arama yaptigi icin O(n) zaman alir.
+Sonuc olarak O(n^2) zaman alirlar.
+
+*sortList metodunda cocktail sort yaptigimiz icin en iyi zamanda (hepsinin sirali olmasi durumunda) O(n) en kotu zaman olarakda 
+bastan sona,sondan basa gidecegi icin O(n^2) olarak bulunur.Ortalama da O(n^2) olarak alinir.
+
+*toString metodu tek for() icinde oldugu icin size() degerine n dersek algoritma 
+karmasikligi O(n) olur.     
